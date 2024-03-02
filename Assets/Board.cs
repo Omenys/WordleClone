@@ -11,9 +11,11 @@ public class Board : MonoBehaviour
     KeyCode.U, KeyCode.V, KeyCode.W, KeyCode.X,
     KeyCode.Y, KeyCode.Z, };
 
-    private Row[] rows;
-    private int rowIndex;
-    private int columnIndex;
+    public Row[] rows;
+    public int rowIndex;
+    public int columnIndex;
+    [SerializeField] WordleModel model;
+    [SerializeField] WordleController controller;
 
 
     private void Awake()
@@ -24,6 +26,8 @@ public class Board : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Row currentRow = rows[rowIndex];
+
         // If backspace, set tile at row and column index to null character
         if (Input.GetKeyDown(KeyCode.Backspace))
         {
@@ -39,12 +43,21 @@ public class Board : MonoBehaviour
 
         }
         // Submit guess
-        else if (columnIndex >= rows[rowIndex].tiles.Length)
+        else if (columnIndex >= currentRow.tiles.Length - 1 && Input.GetKeyDown(KeyCode.Return))
         {
+            // Submit guess  at current row
+            controller.SubmitGuess(currentRow);
 
+            // If end of board reached, no longer accept input
+            if (rowIndex >= rows.Length)
+            {
+                enabled = false;
+                Debug.Log("Attempt to access out of row boundaries");
+                return;
+            }
 
         }
-        else
+        else if (columnIndex <= currentRow.tiles.Length - 1)
         {
             for (int i = 0; i < Supported_Keys.Length; i++)
             {
@@ -70,4 +83,5 @@ public class Board : MonoBehaviour
             }
         }
     }
+
 }

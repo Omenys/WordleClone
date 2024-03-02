@@ -1303,6 +1303,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   possibleAnswersAsset: {fileID: 4900000, guid: c288c00238567c64f880969cc9165310, type: 3}
   allowedWordsAsset: {fileID: 4900000, guid: bb2f52d942850de47864938ac75435d3, type: 3}
+  correctAnswer: 
+  currentAttempt: 0
 --- !u!4 &926531073
 Transform:
   m_ObjectHideFlags: 0
@@ -1348,6 +1350,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   model: {fileID: 926531072}
+  board: {fileID: 1312517887}
 --- !u!4 &996652867
 Transform:
   m_ObjectHideFlags: 0
@@ -1657,6 +1660,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a70e79c3a2263944aed76759a09506c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rows: []
+  rowIndex: 0
+  columnIndex: 0
+  model: {fileID: 926531072}
+  controller: {fileID: 996652866}
 --- !u!1001 &1406794562
 PrefabInstance:
   m_ObjectHideFlags: 0

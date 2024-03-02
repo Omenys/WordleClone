@@ -7,8 +7,8 @@ public class WordleModel : MonoBehaviour
     [SerializeField] TextAsset possibleAnswersAsset;
     [SerializeField] TextAsset allowedWordsAsset;
 
-    string correctAnswer;
-    int currentAttempt;
+    public string correctAnswer;
+    public int currentAttempt;
     public void Setup()
     {
         // Create arrays of words
@@ -27,22 +27,8 @@ public class WordleModel : MonoBehaviour
 
 
 
-    bool isValidGuess(string guess)
+    public bool isValidGuess(string guess)
     {
         return true;
-    }
-
-
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 }
