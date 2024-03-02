@@ -1,26 +1,24 @@
 using UnityEngine;
 
+
+// CONTROLLER SCRIPT INTERACTS WITH MODEL & PROCESSES GAME DATA, CALCULATIONS, ETC (MVC FORMAT)
 public class WordleController : MonoBehaviour
 {
-    WordleModel model;
-    WordleView view;
+    [SerializeField] WordleModel model;
+    //[SerializeField] WordleView view;
 
-    void GameSetup()
+
+    public void SubmitGuess(Row row)
     {
 
     }
 
-    void SubmitGuess()
+    public void WinGame()
     {
 
     }
 
-    void WinGame()
-    {
-
-    }
-
-    void LoseGame()
+    public void LoseGame()
     {
 
     }
@@ -28,7 +26,7 @@ public class WordleController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        model.Setup();
     }
 
     // Update is called once per frame

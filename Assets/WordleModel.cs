@@ -1,20 +1,29 @@
-using System.Collections.Generic;
 using UnityEngine;
 
+
+// MODDEL SCRIPT HOLDS DATA; DOES NOT RETURN GAMEPLAY LOGIC OR RUN CALCULATIONS (MVC FORMAT)
 public class WordleModel : MonoBehaviour
 {
+    [SerializeField] TextAsset possibleAnswersAsset;
+    [SerializeField] TextAsset allowedWordsAsset;
 
-    int currentAttempt;
-    TextAsset possibleAnswersAsset;
-    TextAsset allowedWordsAsset;
-    List<string> possibleAnswers = new List<string>();
-    List<string> allowedWords = new List<string>();
     string correctAnswer;
-
-    void Setup()
+    int currentAttempt;
+    public void Setup()
     {
+        // Create arrays of words
+        string[] possibleAnswers = possibleAnswersAsset.ToString().Split('\n');
+        string[] allowedWords = allowedWordsAsset.ToString().Split('\n');
 
+        foreach (string answer in possibleAnswers)
+        {
+            Debug.Log(answer);
+        }
     }
+
+    // Choose random word to be answer
+
+
 
     bool isValidGuess(string guess)
     {
