@@ -15,13 +15,15 @@ public class WordleModel : MonoBehaviour
         string[] possibleAnswers = possibleAnswersAsset.ToString().Split('\n');
         string[] allowedWords = allowedWordsAsset.ToString().Split('\n');
 
-        foreach (string answer in possibleAnswers)
-        {
-            Debug.Log(answer);
-        }
+        // Choose random word to be answer
+        correctAnswer = possibleAnswers[Random.Range(0, possibleAnswers.Length)];
+        correctAnswer = correctAnswer.ToLower().Trim();
+
+        /* FOR TESTING
+        correctAnswer = possibleAnswers[0];
+        */
     }
 
-    // Choose random word to be answer
 
 
 
