@@ -24,14 +24,31 @@ public class Board : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (columnIndex >= rows[rowIndex].tiles.Length)
+        // If backspace, set tile at row and column index to null character
+        if (Input.GetKeyDown(KeyCode.Backspace))
         {
+            columnIndex--;
+            // Make sure backspacing does not go outside of array range
+            if (columnIndex < 0)
+            {
+                columnIndex = 0;
+            }
+            Row row = rows[rowIndex];
+            Tile tile = row.tiles[columnIndex];
+            tile.SetLetter('\0');
+
+        }
+        // Submit guess
+        else if (columnIndex >= rows[rowIndex].tiles.Length)
+        {
+
 
         }
         else
         {
             for (int i = 0; i < Supported_Keys.Length; i++)
             {
+                // If supported key is pressed, update tile at row and column index to character
                 if (Input.GetKeyDown(Supported_Keys[i]))
                 {
                     Row row = rows[rowIndex];
