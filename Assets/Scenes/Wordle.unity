@@ -1351,6 +1351,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   model: {fileID: 926531072}
   board: {fileID: 1312517887}
+  fill: {fileID: 0}
+  outline: {fileID: 0}
+  fillColor: {r: 0, g: 0, b: 0, a: 0}
+  outlineColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!4 &996652867
 Transform:
   m_ObjectHideFlags: 0
@@ -2439,6 +2443,10 @@ PrefabInstance:
     - target: {fileID: 4365110698138448776, guid: bbe3f25f7adef1b4ebf3086495b0de0f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6990977653419104525, guid: bbe3f25f7adef1b4ebf3086495b0de0f, type: 3}
+      propertyPath: <letter>k__BackingField
+      value: 46
       objectReference: {fileID: 0}
     - target: {fileID: 8247820552189762829, guid: bbe3f25f7adef1b4ebf3086495b0de0f, type: 3}
       propertyPath: m_AnchorMax.y

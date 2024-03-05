@@ -1,6 +1,7 @@
 using UnityEngine;
 
 
+
 // MODDEL SCRIPT HOLDS DATA; DOES NOT RETURN GAMEPLAY LOGIC OR RUN CALCULATIONS (MVC FORMAT)
 public class WordleModel : MonoBehaviour
 {
@@ -24,11 +25,5 @@ public class WordleModel : MonoBehaviour
         */
     }
 
-
-
-
-    public bool isValidGuess(string guess)
-    {
-        return true;
-    }
 }
+

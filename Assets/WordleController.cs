@@ -14,6 +14,7 @@ public class WordleController : MonoBehaviour
 
     }
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,14 +37,17 @@ public class WordleController : MonoBehaviour
             if (tile.letter == model.correctAnswer[i])
             {
                 // Correct Answer
+                tile.SetTileState(Tile.TileState.Correct);
             }
             else if (model.correctAnswer.Contains(tile.letter))
             {
                 // Letter within word but wrong position
+                tile.SetTileState(Tile.TileState.Almost);
             }
             else
             {
                 // Incorrect
+                tile.SetTileState(Tile.TileState.Incorrect);
             }
         }
 
@@ -55,3 +59,5 @@ public class WordleController : MonoBehaviour
 
     }
 }
+
+
