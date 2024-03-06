@@ -1351,10 +1351,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   model: {fileID: 926531072}
   board: {fileID: 1312517887}
-  fill: {fileID: 0}
-  outline: {fileID: 0}
-  fillColor: {r: 0, g: 0, b: 0, a: 0}
-  outlineColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!4 &996652867
 Transform:
   m_ObjectHideFlags: 0

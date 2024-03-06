@@ -106,6 +106,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 632b187c12fda3d4fad3728f00afc24e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  defaultColor: {r: 0.3019608, g: 0.3019608, b: 0.3019608, a: 1}
+  correctColor: {r: 0.17399432, g: 0.4339623, b: 0.17399432, a: 1}
+  almostColor: {r: 0.5283019, g: 0.49633294, b: 0.12709148, a: 1}
+  incorrectColor: {r: 0.3019608, g: 0.3019608, b: 0.3019608, a: 1}
+  tileImage: {fileID: 0}
 --- !u!1 &6763891690591190475
 GameObject:
   m_ObjectHideFlags: 0

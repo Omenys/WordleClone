@@ -9,7 +9,7 @@ public class Tile : MonoBehaviour
     public Color defaultColor = Color.gray;
     public Color correctColor = Color.green;
     public Color almostColor = Color.yellow;
-    public Color incorrectColor = Color.red;
+    public Color incorrectColor = Color.gray;
     public Image tileImage;
 
     public enum TileState
